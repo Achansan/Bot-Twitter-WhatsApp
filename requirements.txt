@@ -1,5 +1,5 @@
-tweepy
+tweepy==4.10.0
 requests
 googletrans==4.0.0-rc1
 python-dotenv
-twilio
+twilio==6.60.0
