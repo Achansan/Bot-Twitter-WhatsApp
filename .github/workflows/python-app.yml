@@ -2,7 +2,7 @@ name: Twitter WhatsApp Bot
 
 on:
   schedule:
-    - cron: "*/5 * * * *"  # Isso vai rodar o bot a cada 5 minutos, se necessário.
+    - cron: "*/5 * * * *"  # Isso vai rodar o bot a cada 5 minutos
   push:
     branches:
       - main  # Para rodar também quando você fizer push na branch 'main'
@@ -17,7 +17,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.9'  # Defina a versão do Python como 3.9 (mais estável)
+        python-version: '3.9'  # Defina a versão do Python como 3.9
 
     - name: Check Python version
       run: python --version  # Verifica se o Python está configurado corretamente
@@ -30,8 +30,8 @@ jobs:
     - name: Cache Python dependencies
       uses: actions/cache@v2
       with:
-        path: ~/.cache/pip  # Caminho onde as dependências do Python são armazenadas
-        key: ${{ runner.os }}-python-${{ hashFiles('**/requirements.txt') }}  # Chave do cache, baseada no hash do requirements.txt
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-python-${{ hashFiles('**/requirements.txt') }}
         restore-keys: |
           ${{ runner.os }}-python-
 
