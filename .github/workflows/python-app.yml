@@ -30,8 +30,8 @@ jobs:
     - name: Cache Python dependencies
       uses: actions/cache@v2
       with:
-        path: ~/.cache/pip
-        key: ${{ runner.os }}-python-${{ hashFiles('**/requirements.txt') }}
+        path: ~/.cache/pip  # Caminho onde as dependências do Python são armazenadas
+        key: ${{ runner.os }}-python-${{ hashFiles('**/requirements.txt') }}  # Chave do cache, baseada no hash do requirements.txt
         restore-keys: |
           ${{ runner.os }}-python-
 
