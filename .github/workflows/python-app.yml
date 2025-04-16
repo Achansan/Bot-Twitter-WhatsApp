@@ -35,4 +35,4 @@ jobs:
         TWILIO_FROM: ${{ secrets.TWILIO_FROM }}
         TWILIO_TO: ${{ secrets.TWILIO_TO }}
       run: |
-        python twitter_whatsapp_bot.py
+        twitter_whatsapp_bot.py
